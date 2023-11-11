@@ -117,6 +117,7 @@ const CHARGED_NITRO = __inGameColor(245, 98, 78);
 const ACID = __inGameColor(157, 240, 40);
 const THERMITE = __inGameColor(195, 140, 70);
 const BURNING_THERMITE = __inGameColor(255, 130, 130);
+const DIAMOND = __inGameColor(52, 207, 235);
 
 /*
  * It would be nice to combine the elements and elementActions
@@ -164,6 +165,7 @@ const elements = new Uint32Array([
   ACID,
   THERMITE,
   BURNING_THERMITE,
+  DIAMOND;
 ]);
 const elementActions = [
   BACKGROUND_ACTION,
@@ -203,6 +205,7 @@ const elementActions = [
   ACID_ACTION,
   THERMITE_ACTION,
   BURNING_THERMITE_ACTION,
+  DIAMOND_ACTION,
 ];
 Object.freeze(elementActions);
 
@@ -640,6 +643,7 @@ const __lava_immune = [
   WATER,
   SALT_WATER,
   STEAM,
+  DIAMOND,
 ];
 Object.freeze(__lava_immune);
 const __num_lava_immune = __lava_immune.length;
@@ -1193,6 +1197,8 @@ function BURNING_THERMITE_ACTION(x, y, i) {
   if (doDensitySink(x, y, i, SALT_WATER, false, 95)) return;
   if (doDensitySink(x, y, i, OIL, false, 95)) return;
 }
+
+function DIAMOND_ACTION(x, y, i) {}
 
 /*  =============================== Helpers =============================== */
 
